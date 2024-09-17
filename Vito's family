@@ -1,1 +1,24 @@
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int main()
+{  int t,r;//t幾筆測資,r親戚數
+   cin>>t;
+   while(t--){
+     cin>>r;
+     int street[r];
+     for(int i=0;i<r;i++){
+        cin>>street[i];
+     }
+     sort(street,street+r);
+     int middle=street[r/2];
+     int sum=0;
+     for(int i=0;i<r;i++){
+     sum+=  abs(street[i]- middle);}
+     cout<<sum<<endl;
+   }
+    return 0;
+}
 
